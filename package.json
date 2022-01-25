@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:SwannG/cozy-konnector-mypeopledoc.git"
+    "url": "git@github.com:konnectors/cozy-konnector-mypeopledoc.git"
   },
   "keywords": [],
   "author": "Swann Giboureau",
