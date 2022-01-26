@@ -5,7 +5,7 @@
   "language": "node",
   "icon": "icon.svg",
   "slug": "mypeopledoc",
-  "source": "git@github.com:konnectors/cozy-konnector-mypeopledoc.git",
+  "source": "git@github.com:konnectors/mypeopledoc.git",
   "editor": "SwannG",
   "vendor_link": "https://www.mypeopledoc.com",
   "categories": ["online_services"],
