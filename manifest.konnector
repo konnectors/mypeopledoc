@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.0",
   "name": "MyPeopleDoc",
   "type": "konnector",
   "language": "node",
@@ -8,9 +8,7 @@
   "source": "git@github.com:konnectors/mypeopledoc.git",
   "editor": "SwannG",
   "vendor_link": "https://www.mypeopledoc.com",
-  "categories": [
-    "online_services"
-  ],
+  "categories": ["online_services"],
   "fields": {
     "login": {
       "type": "text"
@@ -19,11 +17,7 @@
       "type": "password"
     }
   },
-  "folders": [
-    {
-      "defaultDir": "$administrative/$konnector/$account"
-    }
-  ],
+  "folders": [{"defaultDir": "$administrative/$konnector/$account"}],
   "data_types": [
     "files"
   ],
@@ -46,10 +40,7 @@
     "name": "Swann Giboureau",
     "url": "https://github.com/SwannG"
   },
-  "langs": [
-    "fr",
-    "en"
-  ],
+  "langs": ["fr", "en"],
   "locales": {
     "fr": {
       "short_description": "Récupère vos documents MyPeopleDoc",
