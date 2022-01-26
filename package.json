@@ -1,10 +1,10 @@
 {
-  "name": "cozy-konnector-mypeopledoc",
+  "name": "MyPeopleDoc",
   "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git@github.com:konnectors/cozy-konnector-mypeopledoc.git"
+    "url": "git@github.com:konnectors/mypeopledoc.git"
   },
   "keywords": [],
   "author": "Swann Giboureau",
