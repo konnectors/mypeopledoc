@@ -172,12 +172,12 @@ class MyPeopleDocConnector extends CookieKonnector {
       res.docs.forEach(doc => {
         documents.push({
           title: doc.title,
-          subPath: VENDOR,
           fileurl: `https://www.mypeopledoc.com/api/documents/${doc.id}/download`,
           filename:
             doc.profile && doc.profile.name
               ? `${doc.profile.name}_${doc.name}`
               : doc.name,
+          vendor: VENDOR,
           vendorRef: doc.id,
           requestOptions: {
             headers: {
