@@ -6,8 +6,12 @@ const {
   CookieKonnector,
   log,
   solveCaptcha,
-  errors
+  errors,
+  cozyClient
 } = require('cozy-konnector-libs')
+
+const models = cozyClient.new.models
+const { Qualification } = models.document
 
 const VENDOR = 'MyPeopleDoc'
 const baseUrl = 'https://www.mypeopledoc.com'
@@ -179,6 +183,14 @@ class MyPeopleDocConnector extends CookieKonnector {
               : doc.name,
           vendor: VENDOR,
           vendorRef: doc.id,
+          metadata: {
+            contentAuthor: 'mypeopledoc.com',
+            issueDate: doc.date,
+            datetime: new Date(),
+            datetimeLabel: `issueDate`,
+            carbonCopy: true,
+            qualification: Qualification.getByLabel('pay_sheet')
+          },
           requestOptions: {
             headers: {
               Accept: '*/*'
