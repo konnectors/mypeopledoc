@@ -29,6 +29,9 @@
   ],
   "screenshots": [],
   "permissions": {
+    "carbon_copy": {
+      "type": "io.cozy.certified.carbon_copy"
+    },
     "bank operations": {
       "type": "io.cozy.bank.operations"
     },
@@ -55,6 +58,9 @@
       "short_description": "Récupère vos documents MyPeopleDoc",
       "long_description": "Récupère tous vos documents de MyPeopleDoc et les télécharge sur votre Cozy Drive dans le dossier MyPeopleDoc. La double authentification est aussi gérée.",
       "permissions": {
+        "carboncopy": {
+          "description": "Utilisé pour certifier que vos fichiers sont copie conforme avec les documents d'origine"
+        },
         "bank operations": {
           "description": "Utilisé pour relier les factures à des operations bancaires"
         },
@@ -73,6 +79,9 @@
       "short_description": "Fetch your MyPeopleDoc documents",
       "long_description": "Fetch all your documents from MyPeopleDoc and uploads them to your Cozy Drive in the MyPeopleDoc folder. 2FA can also be used.",
       "permissions": {
+        "carboncopy": {
+          "description": "Use to certify your files are the exact copy of the originals"
+        },
         "bank operations": {
           "description": "Required to link bank operations to bills"
         },
@@ -88,5 +97,15 @@
       }
     }
   },
+   "qualification_labels": [
+    "pay_sheet"
+  ],
+  "features": [
+    "LOGIN_OK",
+    "METADATA_DEDUP",
+    "CARBON_COPY",
+    "DOC_QUALIFICATION_V2",
+    "SENTRY_V2"
+  ],
   "manifest_version": "2"
 }
