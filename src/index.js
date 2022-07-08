@@ -185,11 +185,11 @@ class MyPeopleDocConnector extends CookieKonnector {
           vendorRef: doc.id,
           metadata: {
             contentAuthor: 'mypeopledoc.com',
-            issueDate: doc.date,
+            issueDate: new Date(doc.created_at),
             datetime: new Date(),
             datetimeLabel: `issueDate`,
             carbonCopy: true,
-            qualification: Qualification.getByLabel('pay_sheet')
+            qualification: this.evalQualifications(doc)
           },
           requestOptions: {
             headers: {
@@ -205,6 +205,16 @@ class MyPeopleDocConnector extends CookieKonnector {
     }
 
     return documents
+  }
+
+  evalQualifications(doc) {
+    const normalizedDocTitle = doc.title.toLowerCase()
+    if (normalizedDocTitle.match(/bulletins?|salaire|paie/g)) {
+      return Qualification.getByLabel('pay_sheet')
+    }
+    // As we can't tell for sure yet what type will be the others docs
+    // we return undefined
+    return undefined
   }
 }
 
