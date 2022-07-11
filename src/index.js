@@ -183,13 +183,15 @@ class MyPeopleDocConnector extends CookieKonnector {
               : doc.name,
           vendor: VENDOR,
           vendorRef: doc.id,
-          metadata: {
-            contentAuthor: 'mypeopledoc.com',
-            issueDate: new Date(doc.created_at),
-            datetime: new Date(),
-            datetimeLabel: `issueDate`,
-            carbonCopy: true,
-            qualification: this.evalQualifications(doc)
+          fileAttributes: {
+            metadata: {
+              contentAuthor: 'mypeopledoc.com',
+              issueDate: new Date(doc.created_at),
+              datetime: new Date(),
+              datetimeLabel: `issueDate`,
+              carbonCopy: true,
+              qualification: this.evalQualifications(doc)
+            }
           },
           requestOptions: {
             headers: {
